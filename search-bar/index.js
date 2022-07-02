@@ -7,6 +7,9 @@ searchInput.addEventListener("keyup", (e) => {
 
   allNamesDOMCollection.forEach((el) => {
     const currentName = el.textContent.toLowerCase();
-    console.log(currentName);
+
+    currentName.includes(searchQuery)
+      ? (el.style.display = "block")
+      : (el.style.display = "none");
   });
 });
