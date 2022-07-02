@@ -7,25 +7,20 @@ const totalSlides = slides.length;
 
 hideAllSlides = () => {
   slides.forEach((slide) => {
-    console.log(slide);
     slide.classList.remove("carousel-item-visible");
     slide.classList.add("carousel-item-hidden");
   });
 };
 
 moveToPrevSlide = () => {
-  console.log("prev slide");
+  hideAllSlides();
+  slidePosition === 0 ? (slidePosition = totalSlides - 1) : slidePosition--;
+  slides[slidePosition].classList.add("carousel-item-visible");
 };
 
 moveTonextSlide = () => {
   hideAllSlides();
-
-  if (slidePosition === totalSlides - 1) {
-    slidePosition = 0;
-  } else {
-    slidePosition++;
-  }
-  console.log(slidePosition);
+  slidePosition === totalSlides - 1 ? (slidePosition = 0) : slidePosition++;
   slides[slidePosition].classList.add("carousel-item-visible");
 };
 
