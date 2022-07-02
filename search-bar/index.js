@@ -1,6 +1,6 @@
-const usernameInput = document.getElementById("usernameInput");
+const searchInput = document.getElementById("searchInput");
 
-usernameInput.addEventListener("keyup", (e) => {
+searchInput.addEventListener("keyup", (e) => {
   let username = e.target.value.toLowerCase();
   console.log(username);
 });
