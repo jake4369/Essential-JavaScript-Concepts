@@ -1,0 +1,39 @@
+.carousel {
+  max-width: 600px;
+  position: relative;
+}
+
+.carousel-item {
+  display: none;
+}
+
+.carousel-item .carousel-item {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+.carousel-item-visible {
+  display: block;
+}
+
+.carousel-actions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  margin: 0 20px;
+  cursor: pointer;
+}
