@@ -21,3 +21,11 @@ button:active {
   transform: scale(0.95);
   box-shadow: none;
 }
+
+#modal {
+  background: #ffa500;
+  max-width: 600px;
+  height: 200px;
+  margin: 0 auto;
+  padding: 20px;
+}
