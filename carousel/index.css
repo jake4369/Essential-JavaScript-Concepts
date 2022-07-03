@@ -8,15 +8,16 @@
   display: none;
 }
 
-.carousel-item .carousel-item {
+.carousel-item img {
   width: 100%;
   max-width: 600px;
-  height: auto;
+  height: 300px;
 }
 
 .carousel-item-visible {
   display: block;
-  animation: fadeVisibility 0.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
 .carousel-actions {
@@ -40,11 +41,35 @@
   cursor: pointer;
 }
 
-@keyframes fadeVisibility {
-  0% {
-    opacity: 0;
+.dots {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 90%;
+  width: 100%;
+  max-width: 600px;
+}
+
+.dot {
+  display: block;
+  width: 30px;
+  height: 8px;
+  margin: 0 2px;
+  background: #fff;
+  text-align: center;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.active {
+  background: orange;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
